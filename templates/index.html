@@ -1,210 +1,85 @@
+{% extends 'base-page.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html style="font-size: 16px;">
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="Limited-Time Offers">
-    <meta name="description" content>
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Page 6</title>
-    <link rel="stylesheet" href="{% static '/css/nicepage.css' %}" media="screen">
-    <link rel="stylesheet" href="{% static '/css/add.css' %}" media="screen">
-    <script class="u-script" type="text/javascript" src="//static.nicepage.com/shared/assets/jquery-1.9.1.min.js"
-        defer></script>
-    <script class="u-script" type="text/javascript"
-        src="{% static '/js/nicepage.js' %}" defer></script>
-    <link id="u-theme-google-font" rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Archivo+Black:400">
-</head>
+{% block title %}
+Home Page
+{% endblock title %}
 
-<body class="u-body">
-    <header class="u-clearfix u-header u-header" id="sec-2b6b">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <a href="https://nicepage.com" class="u-image u-logo u-image-1">
-                <img src="{% static '/images/logo.jpg' %}"
-                    class="u-logo-image u-logo-image-1">
-            </a>
-            <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-                <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0;">
-                    <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                        href="#">
-                        <svg>
-                            <use href="#menu-hamburger" />
-                        </svg>
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-                            <defs>
-                                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
-                                    <rect y="1" width="16" height="2" />
-                                    <rect y="7" width="16" height="2" />
-                                    <rect y="13" width="16" height="2" />
-                                </symbol>
-                            </defs>
-                        </svg>
-                    </a>
-                </div>
-                <div class="u-nav-container">
-                    <ul class="u-nav u-unstyled u-nav-1">
-                        <li class="u-nav-item"><a
-                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                                href="/Page-2.html" data-page-id="88846" style="padding: 10px 20px;">Page 2</a>
-                            <div class="u-nav-popup fake u-hidden">
-                                <ul class="u-nav u-unstyled">
-                                    <li class="u-nav-item"><a class="u-nav-link">Menu Item 1</a></li>
-                                    <li class="u-nav-item"><a class="u-nav-link">Menu Item 2</a></li>
-                                    <li class="u-nav-item"><a class="u-nav-link">Menu Item 3</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="u-nav-item"><a
-                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                                href="/Page-1.html" data-page-id="88852" style="padding: 10px 20px;">Page 1</a>
-                        </li>
-                        <li class="u-nav-item"><a
-                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                                href="/Page-4.html" data-page-id="88863" style="padding: 10px 20px;">Page 4</a>
-                        </li>
-                        <li class="u-nav-item"><a
-                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                                href="/Page-5.html" data-page-id="88867" style="padding: 10px 20px;">Page 5</a>
-                        </li>
-                        <li class="u-nav-item"><a
-                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                                href="/Page-6.html" data-page-id="88868" style="padding: 10px 20px;">Page 6</a>
-                        </li>
-                        <li class="u-nav-item"><a
-                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                                href="/Page-3.html" data-page-id="89209" style="padding: 10px 20px;">Page 3</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="u-nav-container-collapse">
-                    <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                        <div class="u-menu-close"></div>
-                        <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Page-2.html"
-                                    data-page-id="88846">Page 2</a>
-                            </li>
-                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Page-1.html"
-                                    data-page-id="88852">Page 1</a>
-                            </li>
-                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Page-4.html"
-                                    data-page-id="88863">Page 4</a>
-                            </li>
-                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Page-5.html"
-                                    data-page-id="88867">Page 5</a>
-                            </li>
-                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Page-6.html"
-                                    data-page-id="88868">Page 6</a>
-                            </li>
-                            <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Page-3.html"
-                                    data-page-id="89209">Page 3</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-                </div>
-            </nav>
-        </div>
-    </header>
+{% block container %}
 
-    <section class="u-align-center u-clearfix u-section-2" id="sec-653a">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <h2 class="u-custom-font u-text u-text-palette-1-base u-text-1">Ограниченные по времени предложения</h2>
-            <div class="u-expanded-width u-list u-repeater u-list-1">
-                <div
-                    class="u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-1">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                        <img alt class="u-expanded-width u-image u-image-default u-image-1"
-                            src="{% static '/images/white-24260.webp' %}">
-                        <div class="u-align-center u-container-style u-expanded-width u-group u-group-1">
-                            <div class="u-container-layout u-valign-top u-container-layout-2">
-                                <h4 class="u-custom-font u-font-oswald u-text u-text-2">Современная футболка</h4>
-                                <h6 class="u-text u-text-3">$20.00</h6>
-                                <a href="https://nicepage.com"
-                                    class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-1">view item</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="u-align-center u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-2">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                        <img alt class="u-expanded-width u-image u-image-default u-image-2"
-                            src="//images03.nicepage.io/c461c07a441a5d220e8feb1a/76fd3428e82f5e0eaf8de69b/t.jpg">
-                        <div class="u-align-center u-container-style u-expanded-width u-group u-video-cover u-group-2">
-                            <div class="u-container-layout u-valign-top u-container-layout-4">
-                                <h4 class="u-custom-font u-font-oswald u-text u-text-4">Женское платье</h4>
-                                <h6 class="u-text u-text-5">$60.00</h6>
-                                <a href="https://nicepage.com"
-                                    class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-2">добавить
-                                    в корзину</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="u-align-center u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-3">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
-                        <img alt class="u-expanded-width u-image u-image-default u-image-3"
-                            src="//images03.nicepage.io/c461c07a441a5d220e8feb1a/3d2df233df16571295fd0b1a/sdsee.jpg">
-                        <div class="u-align-center u-container-style u-expanded-width u-group u-video-cover u-group-3">
-                            <div class="u-container-layout u-valign-top u-container-layout-6">
-                                <h4 class="u-custom-font u-font-oswald u-text u-text-6">Женский хлопковый топ</h4>
-                                <h6 class="u-text u-text-7">$17.00</h6>
-                                <a href="https://nicepage.com"
-                                    class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-3">добавить
-                                    в корзину</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="u-align-center u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-4">
-                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-7">
-                        <img alt class="u-expanded-width u-image u-image-default u-image-4"
-                            src="//images03.nicepage.io/c461c07a441a5d220e8feb1a/decde24fe9235e328b8de453/erw.jpg">
-                        <div class="u-align-center u-container-style u-expanded-width u-group u-video-cover u-group-4">
-                            <div class="u-container-layout u-valign-top u-container-layout-8">
-                                <h4 class="u-custom-font u-font-oswald u-text u-text-default u-text-8">Летнее платье
-                                </h4>
-                                <h6 class="u-text u-text-9">$23.00</h6>
-                                <a href="https://nicepage.com"
-                                    class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-4">добавить
-                                    в корзину</a>
-                            </div>
+<section class="u-align-center u-clearfix u-section-2" id="sec-653a">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-custom-font u-text u-text-palette-1-base u-text-1">Ограниченные по времени предложения</h2>
+        <div class="u-expanded-width u-list u-repeater u-list-1">
+            <div
+                class="u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-1">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                    <img alt class="u-expanded-width u-image u-image-default u-image-1"
+                        src="{% static '/images/white-24260.webp' %}">
+                    <div class="u-align-center u-container-style u-expanded-width u-group u-group-1">
+                        <div class="u-container-layout u-valign-top u-container-layout-2">
+                            <h4 class="u-custom-font u-font-oswald u-text u-text-2">Современная футболка</h4>
+                            <h6 class="u-text u-text-3">$20.00</h6>
+                            <a href="https://nicepage.com"
+                                class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-1">view item</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="u-text u-text-default u-text-10">Изображения из <a
-                    href="https://www.freepik.com/free-photos-vectors/people" target="_blank"> Freepik </a>
-            </p>
+            <div
+                class="u-align-center u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-2">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                    <img alt class="u-expanded-width u-image u-image-default u-image-2"
+                        src="//images03.nicepage.io/c461c07a441a5d220e8feb1a/76fd3428e82f5e0eaf8de69b/t.jpg">
+                    <div class="u-align-center u-container-style u-expanded-width u-group u-video-cover u-group-2">
+                        <div class="u-container-layout u-valign-top u-container-layout-4">
+                            <h4 class="u-custom-font u-font-oswald u-text u-text-4">Женское платье</h4>
+                            <h6 class="u-text u-text-5">$60.00</h6>
+                            <a href="https://nicepage.com"
+                                class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-2">добавить
+                                в корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="u-align-center u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-3">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
+                    <img alt class="u-expanded-width u-image u-image-default u-image-3"
+                        src="//images03.nicepage.io/c461c07a441a5d220e8feb1a/3d2df233df16571295fd0b1a/sdsee.jpg">
+                    <div class="u-align-center u-container-style u-expanded-width u-group u-video-cover u-group-3">
+                        <div class="u-container-layout u-valign-top u-container-layout-6">
+                            <h4 class="u-custom-font u-font-oswald u-text u-text-6">Женский хлопковый топ</h4>
+                            <h6 class="u-text u-text-7">$17.00</h6>
+                            <a href="https://nicepage.com"
+                                class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-3">добавить
+                                в корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="u-align-center u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-4">
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-7">
+                    <img alt class="u-expanded-width u-image u-image-default u-image-4"
+                        src="//images03.nicepage.io/c461c07a441a5d220e8feb1a/decde24fe9235e328b8de453/erw.jpg">
+                    <div class="u-align-center u-container-style u-expanded-width u-group u-video-cover u-group-4">
+                        <div class="u-container-layout u-valign-top u-container-layout-8">
+                            <h4 class="u-custom-font u-font-oswald u-text u-text-default u-text-8">Летнее платье
+                            </h4>
+                            <h6 class="u-text u-text-9">$23.00</h6>
+                            <a href="https://nicepage.com"
+                                class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-4">добавить
+                                в корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-
-
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-a2a9">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <p class="u-small-text u-text u-text-variant u-text-1">Образец текста. Щелкните, чтобы выделить текстовое
-                поле. Щелкните еще раз или дважды щелкните, чтобы начать редактирование текста.</p>
-        </div>
-    </footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-        <a class="u-link" href="https://nicepage.com/website-builder" target="_blank">
-            <span>Template</span>
-        </a>
-        <p class="u-text">
-            <span> создано с помощью </span>
+        <p class="u-text u-text-default u-text-10">Изображения из <a
+                href="https://www.freepik.com/free-photos-vectors/people" target="_blank"> Freepik </a>
         </p>
-        <a class="u-link" href="https://nicepage.com/website-builder" target="_blank">
-            <span>Nicepage</span>
-        </a>.
-    </section>
+    </div>
+</section>
 
-</body>
-
-</html>
+{% endblock container %}
