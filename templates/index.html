@@ -1,85 +1,39 @@
-{% extends 'base-page.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block title %}
-Home Page
-{% endblock title %}
+{{ title }}
+{% endblock %}
 
-{% block container %}
+{% block body %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+  <h1 class="display-4 fw-normal">{{ title }}</h1>
+  <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with this Bootstrap
+    example. It’s built with default Bootstrap components and utilities with little customization.</p>
+</div>
 
-<section class="u-align-center u-clearfix u-section-2" id="sec-653a">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h2 class="u-custom-font u-text u-text-palette-1-base u-text-1">Ограниченные по времени предложения</h2>
-        <div class="u-expanded-width u-list u-repeater u-list-1">
-            <div
-                class="u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-1">
-                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                    <img alt class="u-expanded-width u-image u-image-default u-image-1"
-                        src="{% static '/images/white-24260.webp' %}">
-                    <div class="u-align-center u-container-style u-expanded-width u-group u-group-1">
-                        <div class="u-container-layout u-valign-top u-container-layout-2">
-                            <h4 class="u-custom-font u-font-oswald u-text u-text-2">Современная футболка</h4>
-                            <h6 class="u-text u-text-3">$20.00</h6>
-                            <a href="https://nicepage.com"
-                                class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-1">view item</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="u-align-center u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-2">
-                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                    <img alt class="u-expanded-width u-image u-image-default u-image-2"
-                        src="//images03.nicepage.io/c461c07a441a5d220e8feb1a/76fd3428e82f5e0eaf8de69b/t.jpg">
-                    <div class="u-align-center u-container-style u-expanded-width u-group u-video-cover u-group-2">
-                        <div class="u-container-layout u-valign-top u-container-layout-4">
-                            <h4 class="u-custom-font u-font-oswald u-text u-text-4">Женское платье</h4>
-                            <h6 class="u-text u-text-5">$60.00</h6>
-                            <a href="https://nicepage.com"
-                                class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-2">добавить
-                                в корзину</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="u-align-center u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-3">
-                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
-                    <img alt class="u-expanded-width u-image u-image-default u-image-3"
-                        src="//images03.nicepage.io/c461c07a441a5d220e8feb1a/3d2df233df16571295fd0b1a/sdsee.jpg">
-                    <div class="u-align-center u-container-style u-expanded-width u-group u-video-cover u-group-3">
-                        <div class="u-container-layout u-valign-top u-container-layout-6">
-                            <h4 class="u-custom-font u-font-oswald u-text u-text-6">Женский хлопковый топ</h4>
-                            <h6 class="u-text u-text-7">$17.00</h6>
-                            <a href="https://nicepage.com"
-                                class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-3">добавить
-                                в корзину</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="u-align-center u-container-style u-list-item u-palette-2-light-3 u-repeater-item u-video-cover u-list-item-4">
-                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-7">
-                    <img alt class="u-expanded-width u-image u-image-default u-image-4"
-                        src="//images03.nicepage.io/c461c07a441a5d220e8feb1a/decde24fe9235e328b8de453/erw.jpg">
-                    <div class="u-align-center u-container-style u-expanded-width u-group u-video-cover u-group-4">
-                        <div class="u-container-layout u-valign-top u-container-layout-8">
-                            <h4 class="u-custom-font u-font-oswald u-text u-text-default u-text-8">Летнее платье
-                            </h4>
-                            <h6 class="u-text u-text-9">$23.00</h6>
-                            <a href="https://nicepage.com"
-                                class="u-btn u-btn-rectangle u-button-style u-none u-text-palette-1-base u-btn-4">добавить
-                                в корзину</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container">
+
+  <div class="row row-cols-1 row-cols-md-5 mb-3 text-center">
+    {% for product in products %}
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">{{ product.title }}</h4>
         </div>
-        <p class="u-text u-text-default u-text-10">Изображения из <a
-                href="https://www.freepik.com/free-photos-vectors/people" target="_blank"> Freepik </a>
-        </p>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">{{ product.price }} <small class="text-muted fw-light">euro</small></h1>
+          <img src="/static/images/white-24260.webp"
+              class="lazy init" data-original="/static/images/white-24260.webp"
+              width="200"
+              alt="{{ product.title }}">
+          <h4 class="my-0 fw-normal">Articul: {{ product.articul }}</h4>
+          <a href="product/{{ product.id }}" class="w-100 btn btn-lg btn-outline-primary">View Item</a>
+        </div>
+      </div>
     </div>
-</section>
+    {% endfor %}
+  </div>
 
-{% endblock container %}
+</div>
+{% endblock %}
