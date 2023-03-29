@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
 
@@ -13,14 +14,14 @@
       <header>
         <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
           <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <img src="/static/images/logo.jpg" width="40" height="32" class="me-2" alt="Logo">
+            <img src="{% static '/images/logo.jpg' %}" width="40" height="32" class="me-2" alt="Logo">
             <span class="fs-4"># The Fox Stitch</span>
           </a>
     
           {% block mainmenu %}
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
           {% for m in menu %}
-            <a class="me-3 py-2 text-dark text-decoration-none" href="{{ m.url }}">{{m.name}}</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url m.url %}">{{m.name}}</a>
           {% endfor %}
           </nav>
           {% endblock mainmenu %}
@@ -29,44 +30,35 @@
     
       </header>
 
-      {% block body %}{% endblock %}
+      {% block container %}{% endblock container %}
     
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
           <div class="col-12 col-md">
             <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-              <img src="/static/images/logo.jpg" width="40" height="32" class="me-2" alt="Logo">
+              <img src="{% static '/images/logo.jpg' %}" width="40" height="32" class="me-2" alt="Logo">
               <span class="fs-4"># The Fox Stitch</span>
             </a>
             <small class="d-block mb-3 text-muted">© 2023</small>
           </div>
           <div class="col-6 col-md">
-            <h5>Features</h5>
+            <h5>Our Socials</h5>
             <ul class="list-unstyled text-small">
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
             <h5>Resources</h5>
             <ul class="list-unstyled text-small">
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="/">Home Page</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="shop">Categories</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
             <h5>About</h5>
             <ul class="list-unstyled text-small">
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="contacts">Contacts</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="questions">FAQ</a></li>
             </ul>
           </div>
         </div>

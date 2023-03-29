@@ -1,13 +1,15 @@
 from django.shortcuts import render
 
-# Create your views here.
-def index(request):
-    menu = [{'name': 'Home', 'url': 'index'},
-            {'name': 'Catalogue', 'url': 'index'},
+menu = [{'name': 'Home', 'url': 'index'},
+            {'name': 'Shop', 'url': 'shop'},
             {'name': 'FAQ', 'url': 'questions'},
             {'name': 'Contacts', 'url': 'contacts'},
-            {'name': 'Add Product', 'url': 'add_product'},
-            {'name': 'Add Category', 'url': 'add_category'}] 
+            # {'name': 'Add Product', 'url': 'add_product'},
+            # {'name': 'Add Category', 'url': 'add_category'},
+            ]
+
+# Create your views here.
+def index(request):
     products = [{'id': 1,
                 'title': 'T-Shirt 1',
                 'articul': '2215',
@@ -20,12 +22,6 @@ def index(request):
     return render(request, 'index.html', context=context)
 
 def contacts(request):
-    menu = [{'name': 'Home', 'url': 'index'},
-            {'name': 'Catalogue', 'url': 'index'},
-            {'name': 'FAQ', 'url': 'questions'},
-            {'name': 'Contacts', 'url': 'contacts'},
-            {'name': 'Add Product', 'url': 'add_product'},
-            {'name': 'Add Category', 'url': 'add_category'}] 
     context = {
         'menu': menu,
         'title': 'Contacts'
@@ -33,12 +29,6 @@ def contacts(request):
     return render(request, 'contacts.html', context=context)
 
 def questions(request):
-    menu = [{'name': 'Home', 'url': 'index'},
-            {'name': 'Catalogue', 'url': 'index'},
-            {'name': 'FAQ', 'url': 'questions'},
-            {'name': 'Contacts', 'url': 'contacts'},
-            {'name': 'Add Product', 'url': 'add_product'},
-            {'name': 'Add Category', 'url': 'add_category'}] 
     context = {
         'menu': menu,
         'title': 'FAQ'

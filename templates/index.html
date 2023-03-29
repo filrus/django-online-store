@@ -3,9 +3,9 @@
 
 {% block title %}
 {{ title }}
-{% endblock %}
+{% endblock title %}
 
-{% block body %}
+{% block container %}
 <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
   <h1 class="display-4 fw-normal">{{ title }}</h1>
   <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with this Bootstrap
@@ -19,15 +19,15 @@
     <div class="col">
       <div class="card mb-4 rounded-3 shadow-sm">
         <div class="card-header py-3">
-          <h4 class="my-0 fw-normal">{{ product.title }}</h4>
+          <h4 class="my-0 fw-normal">Articul: {{ product.articul }}</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">{{ product.price }} <small class="text-muted fw-light">euro</small></h1>
-          <img src="/static/images/white-24260.webp"
-              class="lazy init" data-original="/static/images/white-24260.webp"
+          <h3 class="card-title pricing-card-title">{{ product.title }}</h3>
+          <img src="{% static '/images/white-24260.webp' %}"
+              class="lazy init" data-original="{% static '/images/white-24260.webp' %}"
               width="200"
               alt="{{ product.title }}">
-          <h4 class="my-0 fw-normal">Articul: {{ product.articul }}</h4>
+          <h4 class="my-0 fw-normal">{{ product.price }} <small class="text-muted fw-light">euro</small></h4>
           <a href="product/{{ product.id }}" class="w-100 btn btn-lg btn-outline-primary">View Item</a>
         </div>
       </div>
@@ -36,4 +36,4 @@
   </div>
 
 </div>
-{% endblock %}
+{% endblock container %}
